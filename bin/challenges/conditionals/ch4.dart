@@ -27,4 +27,71 @@ import 'dart:io';
 
 void main() {
 
+
+  print('Enter a number');
+  int number1 = int.parse(stdin.readLineSync());
+  print('enter a second number');
+  int number2 = int.parse(stdin.readLineSync());
+  print('These are your numbers ${number1} and ${number2}');
+  print('------------------------------');
+  print('''Enter a number between 0 - 4
+  0 --> add
+  1 --> subtract
+  2 --> multiply
+  3 --> divide
+  4 --> modulo''');
+  int svar = int.parse(stdin.readLineSync());
+  if(svar == 0){
+    print('add');
+    int svar0 = number1 + number2;
+    print('${number1} + ${number2} = ${svar0}');
+    if(svar0.isOdd){
+      print('your number is odd');
+    } else if(svar0.isEven){
+      print('your number is even');
+    }
+  } else if(svar == 1){
+    print('subtract');
+    int svar1 = number1 - number2;
+    print('${number1} - ${number2} = ${svar1}');
+    if(svar1.isOdd){
+      print('your number is odd');
+    } else if(svar1.isEven){
+      print('your number is even');}
+
+  } else if(svar == 2){
+    print('multiply');
+    int svar2 = number1 * number2;
+    print('${number1} * ${number2} = ${svar2}');
+    if(svar2.isOdd){
+      print('your number is odd');
+    } else if(svar2.isEven){
+      print('your number is even');}
+
+  }else if(svar == 3){
+    print('divide');
+    number1.toDouble();
+    number2.toDouble();
+    double svar3 = number1 / number2;
+    int breyta = svar3.toInt();
+    print('${number1} / ${number2} = ${number1 / number2}');
+    if(breyta.isOdd){
+      print('your number is odd');
+    } else if(breyta.isEven){
+      print('your number is even');}
+
+  }else if(svar == 4){
+    print('modulo');
+    int svar4 = number1 % number2;
+    print(svar4);
+    if(svar4.isOdd){
+      print('your number is odd');
+    } else if(svar4.isEven){
+      print('your number is even');}
+  } else {
+    print('thats not between 0 - 4');
+  }
+
+
+
 }
